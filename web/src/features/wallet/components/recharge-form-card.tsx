@@ -525,15 +525,33 @@ export function RechargeFormCard({
               placeholder={t('Enter your redemption code')}
               className='h-9 min-w-0'
             />
-            <Button
-              onClick={onRedeem}
-              disabled={redeeming}
-              variant='outline'
-              className='h-9 px-4'
-            >
-              {redeeming && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-              {t('Redeem')}
-            </Button>
+            <div className='flex flex-wrap items-center justify-end gap-2'>
+              <Button
+                onClick={onRedeem}
+                disabled={redeeming}
+                variant='outline'
+                className='h-9 px-4'
+              >
+                {redeeming && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+                {t('Redeem')}
+              </Button>
+              {topupLink && (
+                <Button
+                  variant='outline'
+                  className='h-9 px-4'
+                  render={
+                    <a
+                      href={topupLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    />
+                  }
+                >
+                  购买
+                  <ExternalLink className='h-3 w-3' />
+                </Button>
+              )}
+            </div>
           </div>
           {topupLink && (
             <p className='text-muted-foreground text-xs'>
