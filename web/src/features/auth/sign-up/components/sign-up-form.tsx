@@ -100,6 +100,9 @@ export function SignUpForm({
 
   const emailValue = form.watch('email')
   const emailVerificationRequired = !!status?.email_verification
+  const emailDomainRestricted = Boolean(
+    status?.email_domain_restriction ?? status?.data?.email_domain_restriction
+  )
   const hasUserAgreement = Boolean(status?.user_agreement_enabled)
   const hasPrivacyPolicy = Boolean(status?.privacy_policy_enabled)
   const requiresLegalConsent = hasUserAgreement || hasPrivacyPolicy
@@ -109,6 +112,12 @@ export function SignUpForm({
     true
   const hasWeChatLogin = Boolean(status?.wechat_login)
   const turnstileReady = !isTurnstileEnabled || Boolean(turnstileToken)
+
+  const supportedEmailDomains = useMemo(() => {
+    const domains =
+      status?.email_domain_whitelist ?? status?.data?.email_domain_whitelist
+    return Array.isArray(domains) ? domains : []
+  }, [status])
 
   const wechatQrCodeUrl = useMemo(() => {
     return (
@@ -318,6 +327,14 @@ export function SignUpForm({
                       {...field}
                     />
                   </FormControl>
+                  {emailDomainRestricted &&
+                    supportedEmailDomains.length > 0 && (
+                      <p className='text-muted-foreground text-xs'>
+                        {t('Supported email domains: {{domains}}', {
+                          domains: supportedEmailDomains.join(' / '),
+                        })}
+                      </p>
+                    )}
                   <FormMessage />
                 </FormItem>
               )}

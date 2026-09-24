@@ -5610,6 +5610,7 @@
     "Super Large": "極大",
     "Support for high concurrency with automatic load balancing": "自動ロードバランシングによる高並行性のサポート",
     "Supported Applications": "サポートされているアプリケーション",
+    "Supported email domains: {{domains}}": "対応メールドメイン：{{domains}}",
     "Supported endpoints": "対応エンドポイント",
     "Supported Imagine Models": "対応Imagineモデル",
     "Supported interfaces": "対応インターフェース",

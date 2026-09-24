@@ -5610,6 +5610,7 @@
     "Super Large": "超大",
     "Support for high concurrency with automatic load balancing": "支持高并发和自动负载均衡",
     "Supported Applications": "常用应用支持",
+    "Supported email domains: {{domains}}": "支持的邮箱域名：{{domains}}",
     "Supported endpoints": "支持的端点",
     "Supported Imagine Models": "支持的 Imagine 模型",
     "Supported interfaces": "支持的接口",

@@ -5610,6 +5610,7 @@
     "Super Large": "Très grand",
     "Support for high concurrency with automatic load balancing": "Prise en charge de la haute concurrence avec équilibrage de charge automatique",
     "Supported Applications": "Applications prises en charge",
+    "Supported email domains: {{domains}}": "Domaines de messagerie pris en charge : {{domains}}",
     "Supported endpoints": "Points de terminaison pris en charge",
     "Supported Imagine Models": "Modèles Imagine pris en charge",
     "Supported interfaces": "Interfaces prises en charge",

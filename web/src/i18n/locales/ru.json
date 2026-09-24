@@ -5610,6 +5610,7 @@
     "Super Large": "Очень крупная",
     "Support for high concurrency with automatic load balancing": "Поддержка высокой конкурентности с автоматической балансировкой нагрузки",
     "Supported Applications": "Поддерживаемые приложения",
+    "Supported email domains: {{domains}}": "Поддерживаемые домены электронной почты: {{domains}}",
     "Supported endpoints": "Поддерживаемые конечные точки",
     "Supported Imagine Models": "Поддерживаемые модели Imagine",
     "Supported interfaces": "Поддерживаемые интерфейсы",

@@ -5610,6 +5610,7 @@
     "Super Large": "Rất lớn",
     "Support for high concurrency with automatic load balancing": "Hỗ trợ đồng thời cao với cân bằng tải tự động",
     "Supported Applications": "Ứng dụng được hỗ trợ",
+    "Supported email domains: {{domains}}": "Tên miền email được hỗ trợ: {{domains}}",
     "Supported endpoints": "Điểm cuối được hỗ trợ",
     "Supported Imagine Models": "Mô hình Imagine được hỗ trợ",
     "Supported interfaces": "Giao diện được hỗ trợ",

@@ -64,7 +64,8 @@
 | 1 | 系统名/品牌：`New API` → `6767 API`（页面标题、logo、footer、侧栏品牌、后台默认系统名、Chat 链接参数、Go 端 SystemName） | `common/constants.go`, `web/index.html`, `web/src/lib/constants.ts`, `web/src/assets/logo.tsx`, `web/src/components/layout/components/footer.tsx`, `web/src/components/layout/components/system-brand.tsx`, `web/src/features/chat/lib/chat-links.ts`, `web/src/features/system-settings/general/system-info-section.tsx`, `web/src/features/system-settings/site/index.tsx` |
 | 2 | 自用模式（self_use_mode）开启时仍显示「注册」入口 | `web/src/features/auth/sign-in/index.tsx` |
 | 3 | 充值页「兑换」旁新增「购买」按钮；下方「点此获取」小店链接（链接地址由后台 `options` 表 `TopUpLink` 配置） | `web/src/features/wallet/components/recharge-form-card.tsx` |
-| 4 | 构建/版本：web 用 `bun run build`（`web/dist` 由 `go:embed` 打进二进制）；Go 用 `CGO_ENABLED=0 GOEXPERIMENT=greenteagc GOOS=linux GOARCH=amd64 go build`，版本号经 `-X common.Version=v1.0.0-rc.40` 注入 | 构建流程（与仓库 `Dockerfile` 同款） |
+| 4 | 注册页在邮箱输入框下方显示「支持的邮箱域名」提示，域名取自后台 `EmailDomainWhitelist`（经 `/api/status` 下发 `email_domain_restriction` / `email_domain_whitelist`），改后台配置提示自动跟着变 | `controller/misc.go`, `web/src/features/auth/sign-up/components/sign-up-form.tsx`, `web/src/features/auth/types.ts`, `web/src/i18n/locales/*.json` |
+| 5 | 构建/版本：web 用 `bun run build`（`web/dist` 由 `go:embed` 打进二进制）；Go 用 `CGO_ENABLED=0 GOEXPERIMENT=greenteagc GOOS=linux GOARCH=amd64 go build`，版本号经 `-X common.Version=v1.0.0-rc.40` 注入 | 构建流程（与仓库 `Dockerfile` 同款） |
 
 > 本表用于快速回顾 fork 相对上游的差异；更新上游代码时注意保留以上改动。
 
